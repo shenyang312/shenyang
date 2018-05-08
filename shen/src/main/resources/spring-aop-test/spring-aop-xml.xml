@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN"  
+ "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+
+
+	<bean id="serviceTarget" class="com.shen.aop.xml.ServiceBeanImpl" />
+	<bean id="logAdvisor" class="com.shen.aop.xml.LogAdvisor" />
+	<bean id="passwordAdvisorTarget" class="com.shen.aop.xml.PasswordAdvisor" />
+
+	<!-- advice 指出建议修改方法的类 的实现 pattern 匹配getPassword修改此方法 -->
+	<bean id="passwordAdvisor"
+		class="org.springframework.aop.support.RegexpMethodPointcutAdvisor">
+		<property name="advice">
+			<ref local="passwordAdvisorTarget" />
+		</property>
+
+		<property name="patterns">
+			<list>
+				<value>.*getPassword</value>
+			</list>
+		</property>
+
+
+	</bean>
+
+
+	<!-- 通过配置bean 实现了动态代理 proxyInterfaces:代理接口 target:实体类 intercepterNames:所动态生成的代理类拦截器 -->
+	<bean id="service" class="org.springframework.aop.framework.ProxyFactoryBean">
+		<property name="proxyInterfaces">
+			<value>com.shen.aop.xml.ServiceBean</value>
+		</property>
+		<property name="target">
+			<ref local="serviceTarget" />
+		</property>
+		<property name="interceptorNames">
+			<list>
+				<value>logAdvisor</value>
+				<value>passwordAdvisor</value>
+			</list>
+		</property>
+	</bean>
+
+
+</beans>  

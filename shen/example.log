@@ -1,0 +1,14 @@
+INFO main com.shen.controller.HelloIn - hello hzh
+INFO main com.shen.controller.HelloIn - hello hzh
+DEBUG main com.shen.controller.HelloIn - Hello World
+INFO main com.shen.controller.HelloIn - hello hzh
+2017-11-21 10:51:57  [ main:0 ] - [ INFO ]  hello hzh
+2017-11-21 10:57:18  [ main:0 ] - [ INFO ]  hello hzh
+2017-11-21 10:58:07  INFO [main] (HelloIn.java:40) - hello hzh
+2017-11-24 10:35:57  INFO [main] (AbstractApplicationContext.java:510) - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@73a8dfcc: startup date [Fri Nov 24 10:35:57 CST 2017]; root of context hierarchy
+2017-11-24 10:35:57  INFO [main] (XmlBeanDefinitionReader.java:317) - Loading XML bean definitions from class path resource [spring-aop-test/spring-aop-aspectj.xml]
+2017-11-24 10:57:09  INFO [main] (XmlBeanDefinitionReader.java:317) - Loading XML bean definitions from class path resource [spring-aop-test/spring-aop-xml.xml]
+2017-11-24 11:09:19  INFO [main] (XmlBeanDefinitionReader.java:317) - Loading XML bean definitions from class path resource [spring-aop-test/spring-aop-xml.xml]
+2017-11-24 14:21:03  INFO [main] (XmlBeanDefinitionReader.java:317) - Loading XML bean definitions from class path resource [spring-aop-test/spring-aop-xml.xml]
+2017-12-01 17:45:17  INFO [ActiveMQ Task-1] (FailoverTransport.java:1040) - Successfully connected to tcp://localhost:61616
+2017-12-01 17:46:36  INFO [ActiveMQ Task-1] (FailoverTransport.java:1040) - Successfully connected to tcp://localhost:61616
