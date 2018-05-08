@@ -24,6 +24,6 @@ public class DemoController {
 	
 	public static void main(String[] args) {
 		Map a = new HashMap();
-		a.put("accountNo", arg1)
+		a.put("accountNo", args);
 	}
 }
