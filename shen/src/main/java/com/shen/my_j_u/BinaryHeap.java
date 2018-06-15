@@ -12,6 +12,7 @@ public class BinaryHeap<T extends Comparable<? super T>> {
      */
     private int currentSize;
 
+
     private T[] array;
 
     public BinaryHeap() {
@@ -52,7 +53,8 @@ public class BinaryHeap<T extends Comparable<? super T>> {
 
         //上滤
         int hole = ++currentSize;
-        for( ; hole>1 && x.compareTo( array[ hole/2 ])<0; hole/=2 ){
+        //如果插入的值比堆中间位置得值小，即上滤，把上节点位置下移动留一个位置给x，如果再小，继续上滤
+        for( array[0] = x; hole>1 && x.compareTo( array[ hole/2 ])<0; hole/=2 ){
             array[ hole ] = array[ hole/2 ];
         }
         array[ hole ] = x;
