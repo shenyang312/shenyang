@@ -28,8 +28,9 @@ class NewJob implements Job{
     @Override
     public void run() {
         try {
-            System.out.println("睡觉中");
+            System.out.println("开始搬砖");
             TimeUnit.SECONDS.sleep(10);
+            System.out.println("搬砖完成");
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
