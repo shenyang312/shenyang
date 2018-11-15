@@ -20,10 +20,9 @@ public class DemoController {
 	public String callSomeInterface() {
 		return "ok in user_info.";
 	}
-	
-	
-	public static void main(String[] args) {
+  public static void main(String[] args) {
 		Map a = new HashMap();
 		a.put("accountNo", args);
-	}
+	} 
+
 }

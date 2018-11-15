@@ -32,6 +32,6 @@
 	<!-- 引入spring-data-redis.xml -->
 	<import resource="classpath:spring-data-redis.xml" />
 	<!-- 引入dubbo.xml -->
-	<import resource="classpath:dubbo-config.xml" />
+	<!--<import resource="classpath:dubbo-config.xml" />-->
 	<!-- <import resource="classpath:redisColony.xml" /> -->
 </beans>
